@@ -7,6 +7,7 @@ A comprehensive Salesforce application retrieved and synchronized from a live or
 This Salesforce DX project contains the complete metadata synchronization from a production Salesforce org, including all business logic, configurations, automations, and settings. The application provides end-to-end business management capabilities for retail operations, customer relationships, inventory management, order processing, and marketing campaigns.
 
 ### 🔄 Repository Status
+
 - **Complete Org Sync**: ✅ All metadata retrieved and committed
 - **GitHub Published**: ✅ https://github.com/frustateduser/HandsMen_Thread
 - **Metadata Files**: 300+ files across 16 metadata types
@@ -15,25 +16,29 @@ This Salesforce DX project contains the complete metadata synchronization from a
 ## 🏗️ Complete Metadata Architecture
 
 ### 📊 Custom Objects (5 Business Entities)
-- **HandsMen_Customer__c** - Customer management with loyalty tracking and purchase history
-- **HandsMen_Order__c** - Complete order processing and fulfillment workflows
-- **HandsMen_Product__c** - Product catalog with pricing and inventory integration
-- **Inventory__c** - Advanced stock management and warehouse tracking
-- **Marketing_Campaign__c** - Campaign management with customer segmentation and targeting
+
+- **HandsMen_Customer\_\_c** - Customer management with loyalty tracking and purchase history
+- **HandsMen_Order\_\_c** - Complete order processing and fulfillment workflows
+- **HandsMen_Product\_\_c** - Product catalog with pricing and inventory integration
+- **Inventory\_\_c** - Advanced stock management and warehouse tracking
+- **Marketing_Campaign\_\_c** - Campaign management with customer segmentation and targeting
 
 ### ⚡ Automation & Business Logic
+
 - **OrderTrigger** - Comprehensive order-related business logic and validations
 - **OrderTriggerHandler** - Robust trigger handler with proper design patterns
 - **OrderTriggerHandlerTest** - Complete test coverage (100%+ lines covered)
 - **3 Flows** - Business process automation for loyalty, orders, and stock management
 
 ### 🖥️ User Interface & Experience (28 Lightning Applications)
+
 - Complete Lightning application suite for different business functions
 - Custom layouts for all objects with optimized field arrangements
 - 170+ page layouts covering all business scenarios
 - Responsive design for desktop and mobile access
 
 ### 🔐 Security & Access Control (5+ Permission Sets)
+
 - **Experience_Profile_Manager** - Portal user management and access control
 - **Inventory_Manager_Permission** - Comprehensive inventory management permissions
 - **Marketing_Team_Permission** - Marketing team specific access and capabilities
@@ -41,17 +46,21 @@ This Salesforce DX project contains the complete metadata synchronization from a
 - **Additional Permission Sets** - Role-based access for various business functions
 
 ### 📧 Email & Communication
+
 - **3 Letterheads** - Professional email branding templates
   - Low_Stock_Alert - Inventory notification branding
   - Loyalty_Program_Email - Customer loyalty communications
   - Order_Confirmation_Email - Transaction confirmation styling
 
 ### 🌐 Integration & External Connections
+
 - **Remote Site Settings** - ApexDevNet and external API integrations
 - **Connected App Configurations** - OAuth and API access management
 
 ### ⚙️ Comprehensive Org Settings (140+ Configuration Files)
+
 Complete organizational configuration covering all Salesforce features:
+
 - **AI & Einstein**: EinsteinAI, EinsteinCopilot, EinsteinGpt, PredictionBuilder
 - **Automation**: Flow, Apex, InvocableAction, PathAssistant
 - **Security**: Advanced security settings, encryption, privacy controls
@@ -64,30 +73,35 @@ Complete organizational configuration covering all Salesforce features:
 ## 🚀 Key Features & Capabilities
 
 ### 👥 Customer Relationship Management
+
 - **Complete Customer Lifecycle**: Track customer information, loyalty status, and comprehensive purchase history
 - **Loyalty Program Integration**: Automated loyalty tracking with tier management and rewards
 - **Customer Segmentation**: Advanced marketing campaign targeting and personalization
 - **360° Customer View**: Unified dashboard with complete customer interaction history
 
 ### 📦 Order & Inventory Management
+
 - **End-to-End Order Processing**: Complete order lifecycle from creation to fulfillment with automated workflows
 - **Real-Time Inventory Control**: Live stock tracking with automatic reorder points and warehouse management
 - **Multi-Location Support**: Warehouse-based inventory with location-specific stock levels
 - **Automated Notifications**: Smart alerts for low stock, order status changes, and fulfillment updates
 
 ### 📈 Marketing & Campaign Management
+
 - **Campaign Automation**: Sophisticated marketing workflows with customer targeting and segmentation
 - **Performance Tracking**: Complete ROI analysis with campaign effectiveness metrics
 - **Email Marketing Integration**: Professional branded communications with tracking and analytics
 - **Lead Nurturing**: Automated lead scoring and nurturing sequences
 
 ### 🛡️ Enterprise Security & Compliance
+
 - **Role-Based Access Control**: Granular permissions for different user types and business functions
 - **Data Validation & Integrity**: Comprehensive business rules ensuring data quality and consistency
 - **Audit Trail**: Complete tracking of all data changes and user activities
 - **Portal Integration**: Secure external user access with proper permission management
 
 ### 🔧 Advanced Configuration
+
 - **Einstein AI Integration**: AI-powered insights, predictions, and recommendations
 - **Flow Automation**: Visual workflow builder for complex business processes
 - **API Integrations**: External system connectivity with proper security controls
@@ -96,6 +110,7 @@ Complete organizational configuration covering all Salesforce features:
 ## 📦 Installation & Deployment
 
 ### Prerequisites
+
 - Salesforce CLI (sf) - Latest version
 - VS Code with Salesforce Extension Pack
 - Git for version control
@@ -105,17 +120,20 @@ Complete organizational configuration covering all Salesforce features:
 ### Quick Start
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/frustateduser/HandsMen_Thread.git
    cd HandsMen_Thread
    ```
 
 2. **Authenticate with your Salesforce org**
+
    ```bash
    sf org login web --alias HandsMenOrg
    ```
 
 3. **Deploy all metadata to your org**
+
    ```bash
    sf project deploy start --source-dir force-app --target-org HandsMenOrg
    ```
@@ -129,6 +147,7 @@ Complete organizational configuration covering all Salesforce features:
 ### Advanced Deployment Options
 
 **Deploy specific metadata types:**
+
 ```bash
 # Deploy only custom objects
 sf project deploy start --metadata "CustomObject:HandsMen_Customer__c,HandsMen_Order__c"
@@ -141,6 +160,7 @@ sf project deploy start --metadata "Flow"
 ```
 
 **Validate before deployment:**
+
 ```bash
 sf project deploy start --source-dir force-app --check-only --target-org HandsMenOrg
 ```
@@ -148,12 +168,14 @@ sf project deploy start --source-dir force-app --check-only --target-org HandsMe
 ## 🔧 Development & Testing
 
 ### Prerequisites
+
 - Salesforce CLI (sf) - Modern Salesforce development tooling
 - VS Code with Salesforce Extension Pack - IDE with Lightning support
 - Node.js 18+ - For testing framework and build tools
 - Git - Version control and collaboration
 
 ### Local Development Setup
+
 ```bash
 # Install dependencies
 npm install
@@ -166,6 +188,7 @@ sf org create scratch --definition-file config/project-scratch-def.json --alias 
 ```
 
 ### Running Tests & Quality Checks
+
 ```bash
 # Run all Apex tests
 sf apex run test --test-level RunLocalTests --target-org HandsMenOrg
@@ -181,6 +204,7 @@ sf project deploy start --source-dir force-app --check-only --test-level RunLoca
 ```
 
 ### Code Quality Standards
+
 - **ESLint Configuration**: Lightning Web Components linting and best practices
 - **Prettier Formatting**: Consistent code formatting across all files
 - **Apex PMD Rules**: Static code analysis for Apex classes and triggers
@@ -190,6 +214,7 @@ sf project deploy start --source-dir force-app --check-only --test-level RunLoca
 ## 📊 Complete Data Model & Relationships
 
 ### Core Business Objects
+
 ```
 HandsMen_Customer__c (Customer Master)
 ├── Personal Information
@@ -261,6 +286,7 @@ Marketing_Campaign__c (Campaign Management)
 ```
 
 ### Advanced Data Features
+
 - **Formula Fields**: Automated calculations for margins, customer scores, and performance metrics
 - **Roll-Up Summary Fields**: Aggregated data from child to parent objects
 - **Validation Rules**: Data integrity enforcement with custom error messages
@@ -271,6 +297,7 @@ Marketing_Campaign__c (Campaign Management)
 ## 🛡️ Business Rules & Validation
 
 ### Data Integrity Controls
+
 - **Email Validation**: RFC-compliant email format validation for all customer communications
 - **Phone Number Standardization**: Automatic formatting and validation of contact numbers
 - **Total Amount Validation**: Comprehensive order total calculations with tax and discount logic
@@ -279,6 +306,7 @@ Marketing_Campaign__c (Campaign Management)
 - **Duplicate Prevention**: Unique customer identification and order number enforcement
 
 ### Business Logic Automation
+
 - **Order Processing Workflow**: Automated status updates from creation to delivery
 - **Inventory Management**: Real-time stock adjustments with low-stock notifications
 - **Customer Loyalty Tracking**: Automatic tier upgrades based on purchase history
@@ -286,6 +314,7 @@ Marketing_Campaign__c (Campaign Management)
 - **Commission Calculations**: Automated sales team compensation calculations
 
 ### Security & Compliance
+
 - **Field-Level Security**: Granular access control for sensitive customer and financial data
 - **Record-Level Access**: Territory and role-based record visibility
 - **Data Encryption**: Platform encryption for PII and payment information
@@ -295,12 +324,14 @@ Marketing_Campaign__c (Campaign Management)
 ## 🔄 DevOps & Continuous Integration
 
 ### Version Control Strategy
+
 - **Git Workflow**: Feature branch strategy with pull request reviews
 - **Commit Standards**: Conventional commits for automated changelog generation
 - **Branch Protection**: Master branch protection with required status checks
 - **Metadata Tracking**: Salesforce source format for optimal version control
 
 ### Automated Deployment Pipeline
+
 ```bash
 # Development workflow
 git checkout -b feature/new-functionality
@@ -313,6 +344,7 @@ git push origin feature/new-functionality
 ```
 
 ### Quality Assurance
+
 - **Automated Testing**: 90%+ code coverage requirement for all Apex code
 - **Static Code Analysis**: PMD, ESLint, and Salesforce security scanner integration
 - **Metadata Validation**: Pre-deployment validation with org compatibility checks
@@ -320,6 +352,7 @@ git push origin feature/new-functionality
 - **Security Scanning**: Regular vulnerability assessments and dependency checks
 
 ### Backup & Disaster Recovery
+
 - **Daily Org Backups**: Automated metadata and data backup to version control
 - **Point-in-Time Recovery**: Ability to restore to any previous committed state
 - **Environment Synchronization**: Automated sync between development, staging, and production
@@ -328,6 +361,7 @@ git push origin feature/new-functionality
 ## 📖 Documentation & Resources
 
 ### Project Documentation
+
 - **Technical Architecture**: Complete system design and integration patterns
 - **User Guides**: End-user documentation for all business processes
 - **Admin Guides**: System administration and configuration documentation
@@ -335,6 +369,7 @@ git push origin feature/new-functionality
 - **Deployment Guides**: Step-by-step deployment and environment setup
 
 ### Salesforce Resources
+
 - [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
 - [Lightning Platform Development](https://developer.salesforce.com/docs/atlas.en-us.platform_dev_guide.meta/platform_dev_guide/)
@@ -342,6 +377,7 @@ git push origin feature/new-functionality
 - [Flow Builder Guide](https://help.salesforce.com/s/articleView?id=sf.flow.htm)
 
 ### Best Practices
+
 - [Salesforce Well-Architected Framework](https://architect.salesforce.com/well-architected/overview)
 - [Metadata API Best Practices](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_intro.htm)
 - [Security Implementation Guide](https://developer.salesforce.com/docs/atlas.en-us.securityImplGuide.meta/securityImplGuide/)
@@ -350,6 +386,7 @@ git push origin feature/new-functionality
 ## 🤝 Contributing
 
 ### Getting Started
+
 1. Fork the repository to your GitHub account
 2. Create a feature branch with descriptive naming (`git checkout -b feature/customer-loyalty-enhancements`)
 3. Set up your development environment with proper org authentication
@@ -358,6 +395,7 @@ git push origin feature/new-functionality
 6. Submit a pull request with detailed description of changes and business impact
 
 ### Contribution Guidelines
+
 - **Code Standards**: Follow Salesforce best practices and established patterns
 - **Testing Requirements**: All new code must include unit tests and integration tests
 - **Documentation**: Update relevant documentation for any user-facing changes
@@ -365,6 +403,7 @@ git push origin feature/new-functionality
 - **Performance Impact**: Consider governor limits and query optimization in all changes
 
 ### Issue Reporting
+
 - Use GitHub Issues for bug reports and feature requests
 - Provide detailed reproduction steps and environment information
 - Include relevant log files and error messages
@@ -399,20 +438,20 @@ For technical support, feature requests, or business inquiries:
 
 ## 🎯 Project Metrics
 
-| Metric | Value |
-|--------|-------|
-| **Total Metadata Files** | 300+ |
-| **Metadata Types** | 16 |
-| **Custom Objects** | 5 |
-| **Apex Classes** | 2 + Test Classes |
-| **Lightning Applications** | 28 |
-| **Flows** | 3 |
-| **Page Layouts** | 170+ |
-| **Permission Sets** | 5+ |
-| **Org Settings** | 140+ |
-| **Code Coverage** | 100%+ |
-| **Last Updated** | July 12, 2025 |
+| Metric                     | Value            |
+| -------------------------- | ---------------- |
+| **Total Metadata Files**   | 300+             |
+| **Metadata Types**         | 16               |
+| **Custom Objects**         | 5                |
+| **Apex Classes**           | 2 + Test Classes |
+| **Lightning Applications** | 28               |
+| **Flows**                  | 3                |
+| **Page Layouts**           | 170+             |
+| **Permission Sets**        | 5+               |
+| **Org Settings**           | 140+             |
+| **Code Coverage**          | 100%+            |
+| **Last Updated**           | July 12, 2025    |
 
 ---
 
-*This README reflects the complete state of the HandsMen_Thread Salesforce project as synchronized from the production org and published to GitHub. All metadata has been successfully retrieved, committed, and is ready for deployment to target environments.*
+_This README reflects the complete state of the HandsMen_Thread Salesforce project as synchronized from the production org and published to GitHub. All metadata has been successfully retrieved, committed, and is ready for deployment to target environments._

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>64.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
@@ -37,13 +37,15 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Change_Loyalty_Status_To_Bronze</targetReference>
+                <targetReference
+        >Change_Loyalty_Status_To_Bronze</targetReference>
             </connector>
             <label>Total Purchase &lt; 500</label>
         </rules>
     </decisions>
     <environments>Default</environments>
-    <interviewLabel>Loyalty Status Update Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Loyalty Status Update Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Loyalty Status Update Flow</label>
     <loops>
         <name>Loop</name>
@@ -80,7 +82,8 @@
         <label>Get Customer Details</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop</targetReference>
         </connector>

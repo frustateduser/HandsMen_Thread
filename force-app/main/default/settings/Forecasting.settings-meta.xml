@@ -1,23 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ForecastingSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <defaultToPersonalCurrency>false</defaultToPersonalCurrency>
     <enableForecasts>false</enableForecasts>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>commitonly</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >commitonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>commit</sourceCategoryApiName>
             <weight>1.0</weight>
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>closedonly</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >closedonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>closed</sourceCategoryApiName>
             <weight>1.0</weight>
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>openpipeline</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >openpipeline</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>pipeline</sourceCategoryApiName>
             <weight>1.0</weight>
@@ -32,14 +35,16 @@
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>omittedonly</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >omittedonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>omitted</sourceCategoryApiName>
             <weight>1.0</weight>
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>bestcaseforecast</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >bestcaseforecast</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>closed</sourceCategoryApiName>
             <weight>1.0</weight>
@@ -54,21 +59,24 @@
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>pipelineonly</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >pipelineonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>pipeline</sourceCategoryApiName>
             <weight>1.0</weight>
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>customcategory</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >customcategory</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>custom category</sourceCategoryApiName>
             <weight>1.0</weight>
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>commitforecast</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >commitforecast</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>closed</sourceCategoryApiName>
             <weight>1.0</weight>
@@ -79,7 +87,8 @@
         </weightedSourceCategories>
     </forecastingCategoryMappings>
     <forecastingCategoryMappings>
-        <forecastingItemCategoryApiName>bestcaseonly</forecastingItemCategoryApiName>
+        <forecastingItemCategoryApiName
+    >bestcaseonly</forecastingItemCategoryApiName>
         <weightedSourceCategories>
             <sourceCategoryApiName>best case</sourceCategoryApiName>
             <weight>1.0</weight>
