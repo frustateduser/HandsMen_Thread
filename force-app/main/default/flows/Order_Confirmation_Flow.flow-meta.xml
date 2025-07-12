@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <name>Send_Order_Confirmation_Email</name>
         <label>Send Order Confirmation Email</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <actionName
-    >HandsMen_Order__c.Order_Confirmation_Email_Alert</actionName>
+        <actionName>HandsMen_Order__c.Order_Confirmation_Email_Alert</actionName>
         <actionType>emailAlert</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -15,15 +14,13 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment
-    >HandsMen_Order__c.Order_Confirmation_Email_Alert</nameSegment>
+        <nameSegment>HandsMen_Order__c.Order_Confirmation_Email_Alert</nameSegment>
         <offset>0</offset>
     </actionCalls>
     <apiVersion>64.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <environments>Default</environments>
-    <interviewLabel
-  >Order Confirmation Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel>Order Confirmation Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Order Confirmation Flow</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -50,8 +47,7 @@
         <connector>
             <targetReference>Send_Order_Confirmation_Email</targetReference>
         </connector>
-        <doesRequireRecordChangedToMeetCriteria
-    >true</doesRequireRecordChangedToMeetCriteria>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Status__c</field>

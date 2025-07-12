@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <brand>
         <headerColor>#0070D2</headerColor>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
-    <description
-  >The HandsMen Threads Management App is a centralized platform designed to streamline and manage all core operations of the fashion business. This app provides quick access to essential objects including HandsMen Customers, Products, Orders, Inventory, and</description>
+    <description>The HandsMen Threads Management App is a centralized platform designed to streamline and manage all core operations of the fashion business. This app provides quick access to essential objects including HandsMen Customers, Products, Orders, Inventory, and</description>
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
