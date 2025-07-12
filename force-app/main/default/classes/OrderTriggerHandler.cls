@@ -19,6 +19,12 @@ public class OrderTriggerHandler {
             'For Status "Rejection", Quantity must be 0.'
           );
         }
+      } else if (order.Status__c == 'Completed') {
+        if (order.Quantity__c == null || order.Quantity__c <= 0) {
+          order.Quantity__c.addError(
+            'For Status "Completed", Quantity must be greater than 0.'
+          );
+        }
       }
     }
 

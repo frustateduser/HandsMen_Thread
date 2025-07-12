@@ -9,10 +9,11 @@ public class InventoryStockDeductionHandler {
         List<HandsMen_Order__c> ordersToProcess = new List<HandsMen_Order__c>();
         
         for (HandsMen_Order__c order : orderList) {
-            if (order.Status__c == 'Confirmed') {
+            if (order.Status__c == 'Confirmed' || order.Status__c == 'Completed') {
                 if (oldOrderMap == null || 
                     (oldOrderMap.containsKey(order.Id) && 
-                     oldOrderMap.get(order.Id).Status__c != 'Confirmed')) {
+                     oldOrderMap.get(order.Id).Status__c != 'Confirmed' && 
+                     oldOrderMap.get(order.Id).Status__c != 'Completed')) {
                     ordersToProcess.add(order);
                 }
             }
@@ -112,7 +113,8 @@ public class InventoryStockDeductionHandler {
         for (HandsMen_Order__c order : orderList) {
             if ((order.Status__c == 'Cancelled' || order.Status__c == 'Rejection') &&
                 oldOrderMap != null && oldOrderMap.containsKey(order.Id) &&
-                oldOrderMap.get(order.Id).Status__c == 'Confirmed') {
+                (oldOrderMap.get(order.Id).Status__c == 'Confirmed' || 
+                 oldOrderMap.get(order.Id).Status__c == 'Completed')) {
                 ordersToProcess.add(order);
             }
         }
@@ -186,7 +188,8 @@ public class InventoryStockDeductionHandler {
         List<HandsMen_Order__c> ordersToValidate = new List<HandsMen_Order__c>();
         
         for (HandsMen_Order__c order : orderList) {
-            if (order.Status__c == 'Confirmed' && order.HandsMen_Product__c != null && order.Quantity__c != null) {
+            if ((order.Status__c == 'Confirmed' || order.Status__c == 'Completed') && 
+                order.HandsMen_Product__c != null && order.Quantity__c != null) {
                 ordersToValidate.add(order);
             }
         }
