@@ -4,7 +4,7 @@ global Database.QueryLocator start(Database.BatchableContext BC) {
 
 return Database.getQueryLocator(
 
-'SELECT Id, Stock_Quantity__c FROM Product__c WHERE Stock_Quantity__c < 10'
+'SELECT Id, Stock_Quantity__c FROM HandsMen_Product__c WHERE Stock_Quantity__c < 10'
 
 );
 
@@ -14,7 +14,7 @@ global void execute(Database.BatchableContext BC, List<SObject> records) {
 
 List<HandsMen_Product__c> productsToUpdate = new List<HandsMen_Product__c>();
 
-// Cast SObject list to Product__c list
+// Cast SObject list to HandsMen_Product__c list
 
 for (SObject record : records) {
 
