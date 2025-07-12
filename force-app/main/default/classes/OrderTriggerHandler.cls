@@ -24,4 +24,30 @@ public class OrderTriggerHandler {
 
     System.debug('All records validated successfully.');
   }
+
+  
+  public static void handleAfterInsert(List<HandsMen_Order__c> orderList) {
+    
+    InventoryStockDeductionHandler.validateStockAvailability(orderList);
+
+    // Deduct stock for confirmed orders
+    InventoryStockDeductionHandler.deductStockOnOrderConfirmation(orderList);
+  }
+
+  
+  public static void handleAfterUpdate(
+    List<HandsMen_Order__c> orderList,
+    Map<Id, HandsMen_Order__c> oldOrderMap
+  ) {
+    
+    InventoryStockDeductionHandler.deductStockOnOrderConfirmation(
+      orderList,
+      oldOrderMap
+    );
+
+    InventoryStockDeductionHandler.restoreStockOnOrderCancellation(
+      orderList,
+      oldOrderMap
+    );
+  }
 }
